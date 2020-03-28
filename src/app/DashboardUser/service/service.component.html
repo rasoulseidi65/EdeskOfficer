@@ -1,0 +1,64 @@
+<div class="container">
+  <div class="animated fadeIn">
+    <div class="row">
+      <div class="card card-warning shadow-lg mb-5">
+        <div class="card-header">
+          <h3 class="card-title text-right">افزودن سرویس(نوع خدمت)</h3>
+        </div>
+        <!-- /.card-header -->
+        <div class="card-body">
+          <form id="needs-validation" novalidate>
+            <!-- text input -->
+            <div class="row">
+              <div class="col-sm-10 col-md-5">
+                <label class="float-right text-right"> ثبت خدمت جدید</label>
+                <input v-model="service_name" name="service_name" id="service_name" type="text" class="form-control" placeholder="نوع خدمت  خود را وارد کنید..." maxlength="40" required>
+                <div class="invalid-feedback text-right" dir="rtl">
+                  وارد کردن نوع خدمت الزامی ست.
+                </div>
+              </div>
+              <div class="col-sm-2 col-md-2">
+                <button type="submit" class="btn btn-block btn-primary" id="btn1">&nbsp; ثبت&nbsp;&nbsp;
+                </button>
+              </div>
+            </div>
+            <div class="row">
+              <table  class="table table-xs-responsive table-hover"  aria-role="table">
+                <thead>
+                <tr>
+                  <th>شناسه</th>
+                  <th>نوع خدمت</th>
+                  <th>ویرایش</th>
+                  <th>حذف</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr class="success">
+                  <td>123450</td>
+                  <td>ثبت شکوایه</td>
+                  <td><i data-feather="edit"></i></td>
+                  <td><i data-feather="trash"></i></td>
+                </tr>
+                <tr class="info">
+                  <td>123451</td>
+                  <td>ثبت کد ثنا</td>
+                  <td><i data-feather="edit"></i></td>
+                  <td><i data-feather="trash"></i></td>
+                </tr>
+                <tr class="warning">
+                  <td>123452</td>
+                  <td>پیگیری ثبت نام</td>
+                  <td><i data-feather="edit"></i></td>
+                  <td><i data-feather="trash"></i></td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+          </form>
+        </div><!-- /.end card-body -->
+      </div>
+    </div>
+    <!--/.row-->
+  </div>
+
+</div>

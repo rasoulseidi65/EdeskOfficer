@@ -1,0 +1,66 @@
+
+.view.view-cascade {
+  margin-left: 70%!important;
+  background:#ffecb3;
+  /*color: white;*/
+  font-family: IRANSansWeb;
+  border-radius: 10px!important;
+  border-style: solid;
+  border-width: thin;
+  border-color: white;
+
+}
+.card{
+  border-radius: 10px!important;
+  border-style: solid;
+  border-width: thin;
+  border-color: white;
+}
+.card.card-cascade{
+  width: 60rem;
+}
+.input-group{
+  font-family: IRANSansWeb;
+}
+.form-control{
+  border-style: solid;
+  border-width: thin;
+  border-color:#e0e0e0;
+  font-family: IRANSansWeb;
+  font-size: 16px;
+  background:#fff3e0 ;
+
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #777777;
+  font-size: 13px;
+}
+.fas{
+  color:#e65100;
+}
+.btn-primary{
+  font-family: IRANSansWeb;
+  font-size: 15px;
+  line-height: 1;
+  border-radius: 10px!important;
+  border-style: solid;
+  border-width: thin;
+  border-color: white;
+}
+.form-check-label{
+  font-family: IRANSansWeb!important;
+}
+.view.view-cascade {
+  margin-left: 80%!important;
+  /*margin-right: 30%!important;*/
+  margin-top: -20px;
+  background:#a5becf;
+  /*color: white;*/
+  color: #333;
+  font-size: 12px;
+  border-radius: 10px!important;
+  border-style: solid;
+  border-width: thin;
+  border-color: #a5becf;
+
+}

@@ -1,0 +1,87 @@
+.sidenav-container {
+ border-radius: 20px;
+    border-width:thin ;
+    border-style: solid;
+}
+.mat-drawer-content {
+     display: contents!important;
+}
+.sidenav {
+  width: 200px;
+
+}
+@media (min-width: 768px) {
+    .sidenav {
+        display: none;
+    }
+
+    .mizkhedmat-title{
+        display: none;
+    }
+}
+@media (max-width: 767px) {
+
+    .menu{
+        visibility: hidden;
+    }
+}
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 10000;
+}
+a{
+  font-family: Iransans-Light;
+}
+mat-sidenav{
+  background:#0099CC;
+}
+.mat-button{
+     font-family: IRANSansWeb_Bold;
+     font-size: 13px;
+ }
+::ng-deep.mat-list-item-content{
+    font-family: IRANSansWeb_Bold;
+    font-size: 13px;
+}
+mat-toolbar a{
+    display: inline-block;
+    margin:  0 10px;
+    color: white;
+    text-decoration: none;
+    font-family: IRANSansWeb_Bold;
+    font-size: 16px;
+}
+mat-nav-list a{
+    font-family: IRANSansWeb_Bold;
+    font-size: 14px;
+    color: white;
+
+}
+
+.dropdown-item{
+    font-family: IRANSansWeb_Bold;
+
+    font-size: 14px!important;
+}
+
+mat-toolbar{
+    font-family: IRANSansWeb_Bold;
+    color: white;
+}
+
+.sub-menu{
+    margin-right: 4%!important;
+}
+.hr{
+    margin-bottom: -25%;
+}
+
+@media (min-width:450px ) and (max-width: 767px) {
+    .mizkhedmat-title{
+        margin-right: 20%!important;
+    }
+}

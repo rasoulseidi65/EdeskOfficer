@@ -1,0 +1,83 @@
+*{
+  font-family: IRANSansWeb;
+}
+
+.card{
+
+  margin-left:0;
+  width: 100%;
+  height: 100%;
+}
+.card-header{
+  background-color: #217388;
+  color: white;
+  font-family: IRANSansWeb;
+  font-size: 20px;
+}
+#btn1{
+  color: white;
+  border-radius: 30px;
+  margin-top: 2rem;
+  font-family: IRANSansWeb;
+  font-size: 16px;
+
+}
+
+#btn1:hover {
+  background-color: rgba(7, 59, 9, 0.9);
+}
+input{
+  font-family: IRANSansWeb;
+  font-size: 16px;
+}
+table{
+  margin: 50px 100px 50px 100px!important;
+  text-align: center!important;
+  font-family: IRANSansWeb;
+  font-size: 16px;
+}
+.success{
+  background-color: rgba(14, 243, 237, 0.03);
+}
+.info{
+  background-color: rgba(255, 255, 0, 0.13);
+}
+.warning{
+  background-color: rgba(0, 0, 255, 0.02);
+}
+.alert{
+  margin: 50px 300px -100px 300px!important;
+}
+/**************responsive table*************************************/
+@media screen and (max-width: 575px) {
+  .table-xs-responsive th, .table-xs-responsive td {
+    width: 100% !important;
+    display: block !important;
+    box-sizing:border-box;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .table.table-sm-responsive th, .table.table-sm-responsive td {
+    width: 100% !important;
+    display: block !important;
+    box-sizing:border-box;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .table.table-sm-responsive th, .table.table-sm-responsive td {
+    width: 100% !important;
+    display: block !important;
+    box-sizing:border-box;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .table.table-sm-responsive th, .table.table-sm-responsive td {
+    width: 100% !important;
+    display: block !important;
+    box-sizing:border-box;
+  }
+}
+/***********************************************************************/

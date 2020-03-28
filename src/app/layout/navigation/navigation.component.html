@@ -1,0 +1,90 @@
+<mat-sidenav-container class="sidenav-container" dir="rtl">
+  <mat-sidenav #drawer class="sidenav " fixedInViewport="false"
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="!(isHandset$ | async)">
+    <mat-toolbar>  میز خدمت الکترونیک</mat-toolbar>
+      <hr>
+    <mat-nav-list>
+        <!--<a mat-list-item  class="collapse" *ngFor="let item of navItems">{{item.displayName}}-->
+            <!--<a mat-list-item *ngIf="item.children" class="collapse">{{item.children.displayName}}</a>-->
+        <!--</a>-->
+        <a  mat-list-item class="" href="https://lorestan.mporg.ir" (click)="drawer.toggle()"><i class="material-icons mr-5">home</i>صفحه اصلی</a>
+       <a  mat-list-item class="" [routerLink]="''" (click)="drawer.toggle()"><i class="material-icons mr-5">
+           desktop_mac
+       </i>میز خدمت</a>
+       <li class="nav-item mr-4" style="list-style:none">
+            <a mat-list-item  data-toggle="collapse" data-target="#demo"><i class="material-icons mr-5">
+                speaker_notes
+            </i>مشاوره خدمت <i class="fas fa-caret-down ml-1"></i></a>
+            <div id ="demo" class="collapse">
+                <a  mat-list-item class="sub-menu " [routerLink]="['darkhast']" (click)="drawer.toggle()"><i class="material-icons mr-5">
+                    send
+                </i>ارسال درخواست</a>
+               <a  mat-list-item class="sub-menu " [routerLink]="['taghirdarkhast']" (click)="drawer.toggle()"><i class="material-icons mr-5">
+                   border_color
+               </i>تغییر درخواست</a>
+                <a  mat-list-item class="sub-menu" [routerLink]="['moshahede']" (click)="drawer.toggle()"><i class="material-icons mr-5">
+                    pageview
+                </i>مشاهده نتیجه</a>
+                <a  mat-list-item class="sub-menu" [routerLink]="['nazarsanji']" (click)="drawer.toggle()"><i class="material-icons mr-5">
+                    poll
+                </i>نظرسنجی</a>
+            </div>
+        </li>
+       <a mat-list-item class="" [routerLink]="['mosharekat']" (click)="drawer.toggle()"><i class="material-icons mr-5">
+           how_to_vote
+       </i>مشارکت الکترونیک</a>
+        <a mat-list-item class="" [routerLink]="['shekait']" (click)="drawer.toggle()"><i class="material-icons mr-5">
+            local_offer
+        </i>شکایات/انتقادات </a>
+        <a mat-list-item  target="_blank" href="http://185.198.252.57:4444/login/" (click)="drawer.toggle()"><i class="material-icons mr-5">
+            input
+        </i>ورود </a>
+
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+
+    <mat-toolbar  class="primary-color">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span class="mizkhedmat-title ml-5">میز خدمت الکترونیک</span>
+        <span class="spacer"></span>
+        <div class="menu">
+            <a mat-list-item href="https://lorestan.mporg.ir">صفحه اصلی </a>
+            <a mat-list-item [routerLink]="''">میز خدمت</a>
+            <button mat-button [matMenuTriggerFor]="beforeMenu">مشاوره خدمت<i class="fas fa-caret-down ml-1"></i></button>
+            <mat-menu #beforeMenu="matMenu" xPosition="before">
+                <a  mat-list-item class="sub-menu text-center" [routerLink]="['darkhast']">ارسال درخواست</a>
+                <a  mat-list-item class="sub-menu text-center" [routerLink]="['taghirdarkhast']" >تغییر درخواست</a>
+                <a  mat-list-item class="sub-menu text-center" [routerLink]="['moshahede']">مشاهده نتیجه</a>
+                <a  mat-list-item class="sub-menu text-center" [routerLink]="['nazarsanji']">نظرسنجی</a>
+            </mat-menu>
+            <a mat-list-item class="sub-menu" [routerLink]="['mosharekat']">مشارکت الکترونیک</a>
+            <a mat-list-item [routerLink]="['shekait']">شکایات/انتقادات </a>
+
+
+        </div>
+        <div  style="margin-right: 49%">
+            <!--<ul class=" col-md-12 nav navbar-nav navbar-left float-left">-->
+
+            <a target="_blank" href="http://185.198.252.57:4444/login/"> ورود</a>
+
+            <!--</ul>-->
+        </div>
+
+
+
+    </mat-toolbar>
+    <ng-content>
+    </ng-content>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+

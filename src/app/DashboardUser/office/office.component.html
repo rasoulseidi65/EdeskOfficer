@@ -1,0 +1,64 @@
+<div class="container">
+  <div class="animated fadeIn">
+    <div class="row">
+      <div class="card card-warning shadow-lg mb-5">
+        <div class="card-header">
+          <h3 class="card-title text-right">افزودن دفتر</h3>
+        </div>
+        <!-- /.card-header -->
+        <div class="card-body">
+          <form d="needs-validation" novalidate>
+            <!-- text input -->
+            <div class="row">
+              <div class="col-sm-10 col-md-5">
+                <label class="float-right text-right"> ثبت دفتر جدید</label>
+                <input v-model="office_name" name="office_name" id="office_name" type="text" class="form-control" placeholder="دفتر خود را وارد کنید..." maxlength="40" required>
+                <div class="invalid-feedback text-right" dir="rtl">
+                  وارد کردن نام دفتر الزامی ست.
+                </div>
+              </div>
+              <div class="col-sm-2 col-md-2">
+                <button type="submit" class="btn btn-block btn-primary" id="btn1">&nbsp; ثبت&nbsp;&nbsp;
+                </button>
+              </div>
+            </div>
+            <div class="row">
+              <table  class="table table-xs-responsive table-hover"  aria-role="table">
+                <thead>
+                <tr>
+                  <th>کد دفتر</th>
+                  <th>نام دفتر</th>
+                  <th>ویرایش</th>
+                  <th>حذف</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr class="success">
+                  <td>93317001</td>
+                  <td>دفتر شیراز  بلوار مدرس بلوار کوی الزهرا</td>
+                  <td><i data-feather="edit"></i></td>
+                  <td><i data-feather="trash"></i></td>
+                </tr>
+                <tr class="info">
+                  <td>93301025</td>
+                  <td>دفتر تهران چیذر جنب بانک ملت</td>
+                  <td><i data-feather="edit"></i></td>
+                  <td><i data-feather="trash"></i></td>
+                </tr>
+                <tr class="warning">
+                  <td>93305006</td>
+                  <td>دفتر اصفهان  آدرس خیابان شیخ صدوقی شمالی</td>
+                  <td><i data-feather="edit"></i></td>
+                  <td><i data-feather="trash"></i></td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+          </form>
+        </div><!-- /.end card-body -->
+      </div>
+    </div>
+    <!--/.row-->
+  </div>
+
+</div>

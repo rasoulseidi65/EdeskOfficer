@@ -1,0 +1,31 @@
+<form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)">
+  <div class="container">
+    <div *ngIf="successResult" class="mt-5">
+      <div class="alert alert-success text-center">
+       <a class="alert-link text-center">  مقاله با موفقیت ویرایش  شد</a>.
+      </div>
+    </div>
+
+  <div class="row  d-flex justify-content-center">
+    <!-- Left col -->
+
+    <section class="col-lg-12  connectedSortable">
+      <!-- /.card *****-->
+      <div class="card card-primary shadow-lg mt-2">
+        <div class="card-header primary-color ">
+          <h3 class="card-title text-white">مقاله جدید</h3>
+        </div>
+        <!-- /.card-header -->
+        <div class="card-footer">
+          <button type="submit"  class="btn btn-success border-success btn-rounded text-white "><i class="material-icons fa-2x mr-3">
+            add
+            </i>ثبت مقاله</button>
+        </div>
+      </div>
+      <!-- /.left col -->
+
+    </section>
+    <div></div>
+  </div>
+  </div>
+</form>

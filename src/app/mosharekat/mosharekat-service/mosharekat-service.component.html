@@ -1,0 +1,97 @@
+
+
+<div class="d-flex justify-content-center  mr-2 mt-5 mb-5" id="pc">
+  <div class="card card-cascade narrower " style="border-radius: 10px!important;
+    border: 2px solid #a5becf">
+    <div class="view view-cascade overlay">
+      <div class="mt-2 text-center text-dark">
+        <p style="font-family: IRANSansWeb_Bold"><i class="fa fa-user pr-3 m-2"></i>ورود کاربر</p>
+      </div>
+      <a>
+        <div class="mask rgba-white-slight"></div>
+      </a>
+    </div>
+
+    <mat-radio-group>
+      <div class="d-flex justify-content-center">
+        <div class="mr-5">
+          <mat-radio-button value="1"><p class="pl-3 mt-3">مدیر</p></mat-radio-button>
+        </div>
+        <div>
+          <mat-radio-button value="2"><p class="pl-3 mt-3">کارمند دفتر</p></mat-radio-button>
+        </div>
+      </div>
+    </mat-radio-group>
+
+    <hr/>
+
+    <!--  <div class="row">-->
+    <!--    <div class="col-md-6">-->
+    <div class="card-body card-body-cascade">
+
+      <form [formGroup]="formGroup">
+        <div class="form-group row d-flex justify-content-center">
+          <div class="input-group d-flex justify-content-center">
+            <div class="col-md-3 col-xs-3 text-right"><label>نام کاربری:</label></div>
+            <div class="col-md-7 col-xs-7">
+              <div class="input-group-prepend">
+
+
+                <input type="text" class="form-control " placeholder="نام کاربری را وارد نمائید"
+                       formControlName="username"
+                      [(ngModel)]="username"
+                       [ngClass]="{ 'is-invalid': submitted && f.username.errors }"
+                >
+                <span class="input-group-text"><i class="fas fa-2x fa-user"></i> </span>
+
+              </div>
+            </div>
+            <!--            <div *ngIf="f('firstName').touched && f('firstName').errors && f('firstName').invalid"-->
+            <!--                 class="invalid-feedback float-left">-->
+            <!--              <div *ngIf="f('firstName').errors.required">*</div>-->
+            <!--            </div>-->
+          </div>
+          <div class="input-group d-flex justify-content-center mt-3">
+            <div class="col-md-3 col-xs-3 text-right"><label>گذر واژه :</label></div>
+            <div class="col-md-7 col-xs-7">
+              <div class="input-group-prepend">
+                <input type="password" class="form-control " placeholder="گذر واژه را وارد نمائید"
+                       formControlName="password"
+                       [ngClass]="{ 'is-invalid': submitted && f.password.errors }"
+                [(ngModel)]="password">
+                <span class="input-group-text"><i class="fas fa-2x fa-key"></i> </span>
+
+              </div>
+            </div>
+            <!--            <div *ngIf="f('firstName').touched && f('firstName').errors && f('firstName').invalid"-->
+            <!--                 class="invalid-feedback float-left">-->
+            <!--              <div *ngIf="f('firstName').errors.required">*</div>-->
+            <!--            </div>-->
+          </div>
+
+          <div class="input-group d-flex justify-content-center mt-1 mt-4">
+            <div class="col-md-3 col-xs-3 text-right"><label></label></div>
+            <div class="col-md-7 col-xs-7 text-left">
+              <div class="input-group-prepend text-left">
+                <button type="button" class="btn btn-primary btn-lg  btn-block" [routerLink]="['/admin/panel']"  [disabled]="formGroup.invalid">ورود  <i class="fas fa-angle-left text-white " style="font-size: 14px;margin-right: 0.5rem"></i></button>
+
+
+              </div>
+            </div>
+            <!--            <div *ngIf="f('firstName').touched && f('firstName').errors && f('firstName').invalid"-->
+            <!--                 class="invalid-feedback float-left">-->
+            <!--              <div *ngIf="f('firstName').errors.required">*</div>-->
+            <!--            </div>-->
+          </div>
+        </div>
+      </form>
+
+    </div>
+    <!--    </div>-->
+    <!--  </div>-->
+
+  </div>
+
+</div>
+
+

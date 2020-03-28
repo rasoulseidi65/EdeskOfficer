@@ -1,0 +1,90 @@
+<mat-sidenav-container class="sidenav-container" dir="rtl">
+  <mat-sidenav
+      #drawer
+      class="sidenav"
+      fixedInViewport="true"
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="!(isHandset$ | async)"
+  >
+    <img class="profile img-rounded" dir="ltr" src="../../../assets/img/logo.png" style="height: 150px; width: 150px;"/>
+    <mat-toolbar class="title-sidebar">پنل ادمین دفاتر</mat-toolbar>
+    <hr/>
+    <mat-nav-list>
+      <a mat-list-item class="" [routerLink]="['/admin/panel']">
+        صفحه اصلی <i class="material-icons ml-auto ">home</i></a
+      >
+
+      <li class="nav-item mr-4" style="list-style:none">
+        <a mat-list-item data-toggle="collapse" data-target="#demo" aria-expanded="true"
+           aria-controls="demo"
+        > دفاتر <i class="fa fa-chevron-down rotate-icon ml-auto"></i
+        ></a>
+        <div id="demo" class="collapse show">
+          <a mat-list-item class="sub-menu " [routerLink]="['/admin/panel/listarticle']"
+          ><i class="material-icons mr-3"> playlist_add </i>لیست دفاتر
+          </a>
+          <a mat-list-item class="sub-menu " [routerLink]="['/admin/panel/province']"
+          ><i class="material-icons mr-3"> playlist_add </i>ثبت استان ها
+          </a>
+          <a mat-list-item class="sub-menu " [routerLink]="['/admin/panel/city']"
+          ><i class="material-icons mr-3"> playlist_add </i>ثبت شهرها
+          </a>
+          <a mat-list-item class="sub-menu " [routerLink]="['/admin/panel/office']"
+          ><i class="material-icons mr-3"> playlist_add </i>ثبت دفاتر
+          </a>
+          <a mat-list-item class="sub-menu " [routerLink]="['/admin/panel/zone']"
+          ><i class="material-icons mr-3"> playlist_add </i>ثبت منطقه
+          </a>
+        </div>
+      </li>
+      <li class="nav-item mr-4" style="list-style:none">
+        <a mat-list-item data-toggle="collapse" data-target="#article"
+        >رزرو نوبت <i class="fa fa-chevron-down ml-auto"></i
+        ></a>
+        <div id="article" class="collapse">
+          <a mat-list-item class="sub-menu " [routerLink]="['/admin/panel/article']"
+          ><i class="material-icons  mr-3"> playlist_add </i>زمان های آزاد
+          </a>
+          <a mat-list-item class="sub-menu " [routerLink]="['/admin/panel/article/listarticle']"
+          ><i class="material-icons  mr-3">
+            list
+          </i>
+            چاپ رسید
+          </a>
+        </div>
+      </li>
+
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+      >
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <div class="row de-flex flex-row" style="margin-right: 40px;">
+        <div class="col-md-6">
+          <div class="title-profile ">
+            <i class="fa fa-user-circle fa-1x mr-3"></i>حمید عباسی
+          </div>
+        </div>
+        <div class="col-md-6 ">
+          <div class="title-profile " [routerLink]="['/']" style="margin-right: 380px">
+            <a class="fab fa-sign-out fa-1x mr-3"></a>خروج از حساب کاربری
+          </div>
+        </div>
+
+
+      </div>
+
+    </mat-toolbar>
+
+    <ng-content></ng-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

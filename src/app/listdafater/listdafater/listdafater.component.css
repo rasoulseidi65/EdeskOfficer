@@ -1,0 +1,58 @@
+table {
+  width: 100%;
+}
+p{
+  font-family: IRANSansWeb;
+  font-size: 17px;
+}
+button{
+  font-family: IRANSansWeb;
+  font-size: 15px!important;
+}
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+.form-control{
+  font-family: IRANSansWeb;
+
+}
+thead{
+  background-color: #33b5e5;
+  color:white;
+
+}
+.input-group{
+  font-family: IRANSansWeb;
+
+}
+thead th{
+  font-size: 15px;
+  font-family: IRANSansWeb;
+  text-align: center;
+}
+tbody tr td{
+  font-size: 15px;
+  font-family: IRANSansWeb;
+}
+tbody tr:hover{
+  background-color: #33b5e5;
+  color:white;
+}
+.btn-info{
+  line-height: 1;
+  border-color: #33b5e5;
+}
+.modal-body h4,.modal-title{
+  font-family: vazir;
+}
+.form-control{
+  font-family: vazir;
+  font-size: 16px;
+}
+.modal-dialog{
+  width: 100%!important;
+}
+ckeditor{
+  height: 50!important;
+}
